@@ -12,8 +12,8 @@ run apk add --update maven
 run apk add --update git
 
 #downloading repos
-run git clone https://github.com/InsightLab/von-qbe
-run cd von-qbe && git checkout docker
+run git clone -c http.sslVerify=false https://github.com/InsightLab/von-qbe
+run cd von-qbe && git checkout docker --
 
 ARG ip=localhost
 ENV IP ${ip}
